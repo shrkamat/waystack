@@ -1,0 +1,3508 @@
+Build started at 2023-03-25T02:36:55.493280
+Main binary: /usr/bin/python3
+Build Options: -Dwayland:documentation=false -Dprefix=/home/skamath/wld --cross-file=aarch64-linux-gnu.txt
+Python system: Linux
+The Meson build system
+Version: 1.0.1
+Source dir: /home/skamath/waystack
+Build dir: /home/skamath/waystack/build
+Build type: cross build
+Project name: ms
+Project version: 0.1
+-----
+Detecting compiler via: aarch64-linux-gnu-gcc --version
+compiler returned <subprocess.Popen object at 0x7f6d1532fdc0>
+compiler stdout:
+aarch64-linux-gnu-gcc (crosstool-NG ) 6.3.0
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+compiler stderr:
+
+Running command: aarch64-linux-gnu-gcc -E -dM -
+-----
+Detecting linker via: aarch64-linux-gnu-gcc -Wl,--version
+linker returned <subprocess.Popen object at 0x7f6d152df160>
+linker stdout:
+GNU ld (crosstool-NG ) 2.26.20160125
+Copyright (C) 2015 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+
+linker stderr:
+collect2 version 6.3.0
+/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/bin/ld -plugin /opt/tc/brcm/stbgcc-6.3-1.8/bin/../libexec/gcc/aarch64-unknown-linux-gnueabi/6.3.0/liblto_plugin.so -plugin-opt=/opt/tc/brcm/stbgcc-6.3-1.8/bin/../libexec/gcc/aarch64-unknown-linux-gnueabi/6.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVjo7TT.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux /opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/../lib64/crt1.o /opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/../lib64/crti.o /opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/crtbegin.o -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0 -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/lib/../lib64 -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/lib/../lib64 -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/../lib64 -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/lib -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/lib -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib --version -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/crtend.o /opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/../lib64/crtn.o
+
+Sanity testing C compiler: aarch64-linux-gnu-gcc
+Is cross compiler: True.
+Sanity check compiler command line: aarch64-linux-gnu-gcc sanitycheckc.c -o sanitycheckc_cross.exe -D_FILE_OFFSET_BITS=64 -c
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+C compiler for the host machine: aarch64-linux-gnu-gcc (gcc 6.3.0 "aarch64-linux-gnu-gcc (crosstool-NG ) 6.3.0")
+C linker for the host machine: aarch64-linux-gnu-gcc ld.bfd 2.26.20160125
+-----
+Detecting compiler via: aarch64-linux-gnu-g++ --version
+compiler returned <subprocess.Popen object at 0x7f6d1527b9d0>
+compiler stdout:
+aarch64-linux-gnu-g++ (crosstool-NG ) 6.3.0
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+compiler stderr:
+
+Running command: aarch64-linux-gnu-g++ -E -dM -
+-----
+Detecting linker via: aarch64-linux-gnu-g++ -Wl,--version
+linker returned <subprocess.Popen object at 0x7f6d1528cdf0>
+linker stdout:
+GNU ld (crosstool-NG ) 2.26.20160125
+Copyright (C) 2015 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+
+linker stderr:
+collect2 version 6.3.0
+/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/bin/ld -plugin /opt/tc/brcm/stbgcc-6.3-1.8/bin/../libexec/gcc/aarch64-unknown-linux-gnueabi/6.3.0/liblto_plugin.so -plugin-opt=/opt/tc/brcm/stbgcc-6.3-1.8/bin/../libexec/gcc/aarch64-unknown-linux-gnueabi/6.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfjSqYJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux /opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/../lib64/crt1.o /opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/../lib64/crti.o /opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/crtbegin.o -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0 -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/lib/../lib64 -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/lib/../lib64 -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/../lib64 -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/lib -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/lib -L/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib --version -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/crtend.o /opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/../lib64/crtn.o
+
+Sanity testing C++ compiler: aarch64-linux-gnu-g++
+Is cross compiler: True.
+Sanity check compiler command line: aarch64-linux-gnu-g++ sanitycheckcpp.cc -o sanitycheckcpp_cross.exe -D_FILE_OFFSET_BITS=64 -c
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+C++ compiler for the host machine: aarch64-linux-gnu-g++ (gcc 6.3.0 "aarch64-linux-gnu-g++ (crosstool-NG ) 6.3.0")
+C++ linker for the host machine: aarch64-linux-gnu-g++ ld.bfd 2.26.20160125
+-----
+Detecting compiler via: cc --version
+compiler returned <subprocess.Popen object at 0x7f6d152a4370>
+compiler stdout:
+cc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+compiler stderr:
+
+Running command: cc -E -dM -
+-----
+Detecting linker via: cc -Wl,--version
+linker returned <subprocess.Popen object at 0x7f6d152a45b0>
+linker stdout:
+GNU ld (GNU Binutils for Ubuntu) 2.34
+Copyright (C) 2020 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+
+linker stderr:
+collect2 version 9.4.0
+/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5bCkQF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. --version -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+
+Sanity testing C compiler: ccache cc
+Is cross compiler: False.
+Sanity check compiler command line: ccache cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command:  /home/skamath/waystack/build/meson-private/sanitycheckc.exe
+C compiler for the build machine: ccache cc (gcc 9.4.0 "cc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0")
+C linker for the build machine: cc ld.bfd 2.34
+-----
+Detecting compiler via: c++ --version
+compiler returned <subprocess.Popen object at 0x7f6d152a4910>
+compiler stdout:
+c++ (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+compiler stderr:
+
+Running command: c++ -E -dM -
+-----
+Detecting linker via: c++ -Wl,--version
+linker returned <subprocess.Popen object at 0x7f6d152a49d0>
+linker stdout:
+GNU ld (GNU Binutils for Ubuntu) 2.34
+Copyright (C) 2020 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+
+linker stderr:
+collect2 version 9.4.0
+/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbmSpR1.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. --version -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+
+Sanity testing C++ compiler: ccache c++
+Is cross compiler: False.
+Sanity check compiler command line: ccache c++ sanitycheckcpp.cc -o sanitycheckcpp.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command:  /home/skamath/waystack/build/meson-private/sanitycheckcpp.exe
+C++ compiler for the build machine: ccache c++ (gcc 9.4.0 "c++ (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0")
+C++ linker for the build machine: c++ ld.bfd 2.34
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: aarch64
+Host machine cpu: armv8-a
+Target machine cpu family: aarch64
+Target machine cpu: armv8-a
+
+Executing subproject zlib 
+
+Project name: zlib
+Project version: 1.2.13
+C compiler for the host machine: aarch64-linux-gnu-gcc (gcc 6.3.0 "aarch64-linux-gnu-gcc (crosstool-NG ) 6.3.0")
+C linker for the host machine: aarch64-linux-gnu-gcc ld.bfd 2.26.20160125
+C compiler for the build machine: ccache cc (gcc 9.4.0 "cc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0")
+C linker for the build machine: cc ld.bfd 2.34
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpw2qknwt_
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpw2qknwt_/testfile.c -o /home/skamath/waystack/build/meson-private/tmpw2qknwt_/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--fatal-warnings -Wl,--version-script,/home/skamath/waystack/subprojects/zlib-1.2.13/zlib.map 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports link arguments -Wl,--version-script,/home/skamath/waystack/subprojects/zlib-1.2.13/zlib.map: YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpwolwbg0k
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpwolwbg0k/testfile.c -o /home/skamath/waystack/build/meson-private/tmpwolwbg0k/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 /wd4131 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ aarch64-linux-gnu-gcc: error: /wd4131: No such file or directory
+
+Compiler for C supports arguments /wd4131: NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmphv2wgiwv
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmphv2wgiwv/testfile.c -o /home/skamath/waystack/build/meson-private/tmphv2wgiwv/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 /wd4244 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ aarch64-linux-gnu-gcc: error: /wd4244: No such file or directory
+
+Compiler for C supports arguments /wd4244: NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpzj0dv5p9
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpzj0dv5p9/testfile.c -o /home/skamath/waystack/build/meson-private/tmpzj0dv5p9/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 /wd4245 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ aarch64-linux-gnu-gcc: error: /wd4245: No such file or directory
+
+Compiler for C supports arguments /wd4245: NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpyqcw0009
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpyqcw0009/testfile.c -o /home/skamath/waystack/build/meson-private/tmpyqcw0009/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 /wd4267 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ aarch64-linux-gnu-gcc: error: /wd4267: No such file or directory
+
+Compiler for C supports arguments /wd4267: NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpk6cjbsry
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpk6cjbsry/testfile.c -o /home/skamath/waystack/build/meson-private/tmpk6cjbsry/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 /wd4127 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ aarch64-linux-gnu-gcc: error: /wd4127: No such file or directory
+
+Compiler for C supports arguments /wd4127: NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp5k_tc6pd
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp5k_tc6pd/testfile.c -o /home/skamath/waystack/build/meson-private/tmp5k_tc6pd/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wimplicit-fallthrough -Wno-implicit-fallthrough 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ aarch64-linux-gnu-gcc: error: unrecognized command line option '-Wimplicit-fallthrough'; did you mean '-Wno-fallthrough'?
+
+Compiler for C supports arguments -Wno-implicit-fallthrough: NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp51102wbs
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp51102wbs/testfile.c -o /home/skamath/waystack/build/meson-private/tmp51102wbs/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wimplicit-function-declaration -Wno-implicit-function-declaration 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-implicit-function-declaration: YES 
+Adding test "example"
+Build targets in project: 2
+Subproject zlib finished.
+
+
+Executing subproject libxml2 
+
+Project name: libxml2
+Project version: 2.10.3
+C compiler for the host machine: aarch64-linux-gnu-gcc (gcc 6.3.0 "aarch64-linux-gnu-gcc (crosstool-NG ) 6.3.0")
+C linker for the host machine: aarch64-linux-gnu-gcc ld.bfd 2.26.20160125
+C compiler for the build machine: ccache cc (gcc 9.4.0 "cc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0")
+C linker for the build machine: cc ld.bfd 2.34
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp34bw5i7c
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp34bw5i7c/testfile.c -o /home/skamath/waystack/build/meson-private/tmp34bw5i7c/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=attributes 
+
+Code:
+ int foo(void) __attribute__((destructor));
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports function attribute destructor: YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp0jg2is3a
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp0jg2is3a/testfile.c -o /home/skamath/waystack/build/meson-private/tmp0jg2is3a/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <sys/socket.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef AF_INET6
+                AF_INET6;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header "sys/socket.h" has symbol "AF_INET6" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpmzk1193n
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpmzk1193n/testfile.c -o /home/skamath/waystack/build/meson-private/tmpmzk1193n/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdarg.h> void a(va_list*) {}int main(){va_list ap1,ap2;a(&ap1);ap2=(va_list)ap1;return 0;}
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpmzk1193n/testfile.c:1:21: warning: extra tokens at end of #include directive
+ #include <stdarg.h> void a(va_list*) {}int main(){va_list ap1,ap2;a(&ap1);ap2=(va_list)ap1;return 0;}
+                     ^~~~
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmppt0rwzu5
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmppt0rwzu5/testfile.c -o /home/skamath/waystack/build/meson-private/tmppt0rwzu5/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <sys/socket.h> int main(){send(1,(const char*)"",1,1);}
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmppt0rwzu5/testfile.c:1:25: warning: extra tokens at end of #include directive
+ #include <sys/socket.h> int main(){send(1,(const char*)"",1,1);}
+                         ^~~
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp52hgnpvp
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp52hgnpvp/testfile.c -o /home/skamath/waystack/build/meson-private/tmp52hgnpvp/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <netdb.h> int main(){gethostbyname((const char*)"");}
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmp52hgnpvp/testfile.c:1:20: warning: extra tokens at end of #include directive
+ #include <netdb.h> int main(){gethostbyname((const char*)"");}
+                    ^~~
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpw6c9z6h1
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpw6c9z6h1/testfile.c -o /home/skamath/waystack/build/meson-private/tmpw6c9z6h1/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -D_POSIX_THREAD_SAFE_FUNCTIONS 
+
+Code:
+ 
+        #include <stdlib.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef rand_r
+                rand_r;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header "stdlib.h" has symbol "rand_r" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp7opsvx_6
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp7opsvx_6/testfile.c -o /home/skamath/waystack/build/meson-private/tmp7opsvx_6/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <stdarg.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef va_copy
+                va_copy;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header "stdarg.h" has symbol "va_copy" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp596q8vwv
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp596q8vwv/testfile.c -o /home/skamath/waystack/build/meson-private/tmp596q8vwv/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <stdarg.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef __va_copy
+                __va_copy;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header "stdarg.h" has symbol "__va_copy" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpblortzhx
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmpblortzhx/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmpblortzhx/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <dlfcn.h>
+#include <limits.h>
+
+        #if defined __stub_dlopen || defined __stub___dlopen
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &dlopen;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/ccK2FEnl.o: In function `main':
+testfile.cpp:(.text+0x4): undefined reference to `dlopen'
+testfile.cpp:(.text+0x8): undefined reference to `dlopen'
+collect2: error: ld returned 1 exit status
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpm3klt_5l
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmpm3klt_5l/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmpm3klt_5l/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <dlfcn.h>
+        int main(void) {
+
+        /* With some toolchains (MSYS2/mingw for example) the compiler
+         * provides various builtins which are not really implemented and
+         * fall back to the stdlib where they aren't provided and fail at
+         * build/link time. In case the user provides a header, including
+         * the header didn't lead to the function being defined, and the
+         * function we are checking isn't a builtin itself we assume the
+         * builtin is not functional and we just error out. */
+        #if !0 && !defined(dlopen) && !0
+            #error "No definition for __builtin_dlopen found in the prefix"
+        #endif
+
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_dlopen)
+                #error "__builtin_dlopen not found"
+            #endif
+        #elif ! defined(dlopen)
+            __builtin_dlopen;
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpm3klt_5l/testfile.cpp:12:14: error: #error "No definition for __builtin_dlopen found in the prefix"
+             #error "No definition for __builtin_dlopen found in the prefix"
+              ^~~~~
+/home/skamath/waystack/build/meson-private/tmpm3klt_5l/testfile.cpp: In function 'int main()':
+/home/skamath/waystack/build/meson-private/tmpm3klt_5l/testfile.cpp:20:13: error: '__builtin_dlopen' was not declared in this scope
+             __builtin_dlopen;
+             ^~~~~~~~~~~~~~~~
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpp2uit8mq
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmpp2uit8mq/testfile.cpp -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -fpermissive 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("dlfcn.h")
+          #error "Header 'dlfcn.h' could not be found"
+         #endif
+        #else
+         #include <dlfcn.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpupgr1ivh
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmpupgr1ivh/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmpupgr1ivh/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive -Wl,--start-group -ldl -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Run-time dependency dl found: YES
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpspflwbmo
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpspflwbmo/testfile.c -o /home/skamath/waystack/build/meson-private/tmpspflwbmo/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lm -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library m found: YES
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp1no5c1my
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmp1no5c1my/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmp1no5c1my/output.exe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <iconv.h>
+
+int main() {
+    iconv_open("","");
+}
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Run-time dependency iconv found: YES
+Run-time dependency threads found: YES
+Pkg-config binary for 1 is not cached.
+Pkg-config binary for 1 specified from cross file, native file, or env var as ['pkg-config']
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Determining dependency 'liblzma' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /home/skamath/wld/host_dep/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion liblzma` -> 0
+stdout:
+5.2.4
+-----------
+env[PKG_CONFIG_PATH]: /home/skamath/wld/host_dep/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags liblzma` -> 0
+env[PKG_CONFIG_PATH]: /home/skamath/wld/host_dep/lib/x86_64-linux-gnu/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs liblzma` -> 0
+stdout:
+-L/usr/lib/x86_64-linux-gnu -llzma
+-----------
+env[PKG_CONFIG_PATH]: /home/skamath/wld/host_dep/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --libs liblzma` -> 0
+stdout:
+-llzma
+-----------
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpp5sdg1lu
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmpp5sdg1lu/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmpp5sdg1lu/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) {
+            void * something;
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpv9f8pxqb
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmpv9f8pxqb/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmpv9f8pxqb/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) >= 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpgihwnlib
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmpgihwnlib/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmpgihwnlib/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpvgjtl0u5
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmpvgjtl0u5/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmpvgjtl0u5/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 1)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp45cri_aj
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmp45cri_aj/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmp45cri_aj/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 3)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp37z52p07
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmp37z52p07/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmp37z52p07/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 7)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpcmg1qc0a
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmpcmg1qc0a/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmpcmg1qc0a/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 15)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpcmg1qc0a/testfile.cpp: In function 'int main()':
+/home/skamath/waystack/build/meson-private/tmpcmg1qc0a/testfile.cpp:3:65: error: size of array 'a' is negative
+         int main(void) { static int a[1-2*!(sizeof(void *) > 15)]; a[0]=0; return 0; }
+                                                                 ^
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp55hd_ikr
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmp55hd_ikr/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmp55hd_ikr/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 11)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp6vrc7pqd
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmp6vrc7pqd/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmp6vrc7pqd/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 9)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpuhl7rfcn
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmpuhl7rfcn/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmpuhl7rfcn/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 8)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp8c4zhukk
+Command line:  aarch64-linux-gnu-g++ /home/skamath/waystack/build/meson-private/tmp8c4zhukk/testfile.cpp -o /home/skamath/waystack/build/meson-private/tmp8c4zhukk/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/
+programs: =/opt/tc/brcm/stbgcc-6.3-1.8/bin/../libexec/gcc/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../libexec/gcc/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/bin/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/bin/
+libraries: =/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/lib/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/lib/../lib64/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/lib/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/lib/../lib64/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/../lib64/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/lib/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/lib/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/
+
+Compiler stderr:
+ 
+Run-time dependency liblzma found: YES 5.2.4
+Dependency zlib from subproject subprojects/zlib-1.2.13 found: YES 1.2.13
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmprsze1rsl
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmprsze1rsl/testfile.c -o /home/skamath/waystack/build/meson-private/tmprsze1rsl/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lreadline -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/bin/ld: cannot find -lreadline
+collect2: error: ld returned 1 exit status
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpcint_jn9
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpcint_jn9/testfile.c -o /home/skamath/waystack/build/meson-private/tmpcint_jn9/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) {
+            void * something;
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpg308p_gz
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpg308p_gz/testfile.c -o /home/skamath/waystack/build/meson-private/tmpg308p_gz/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) >= 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpx5c9lu9e
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpx5c9lu9e/testfile.c -o /home/skamath/waystack/build/meson-private/tmpx5c9lu9e/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmphim9smwe
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmphim9smwe/testfile.c -o /home/skamath/waystack/build/meson-private/tmphim9smwe/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 1)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpn6cs342b
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpn6cs342b/testfile.c -o /home/skamath/waystack/build/meson-private/tmpn6cs342b/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 3)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpoj8n4c7c
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpoj8n4c7c/testfile.c -o /home/skamath/waystack/build/meson-private/tmpoj8n4c7c/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 7)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmppf1qgchi
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmppf1qgchi/testfile.c -o /home/skamath/waystack/build/meson-private/tmppf1qgchi/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) > 15)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmppf1qgchi/testfile.c: In function 'main':
+/home/skamath/waystack/build/meson-private/tmppf1qgchi/testfile.c:3:37: error: size of array 'a' is negative
+         int main(void) { static int a[1-2*!(sizeof(void *) > 15)]; a[0]=0; return 0; }
+                                     ^
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpfw6_slq9
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpfw6_slq9/testfile.c -o /home/skamath/waystack/build/meson-private/tmpfw6_slq9/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 11)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp0svvcfbx
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp0svvcfbx/testfile.c -o /home/skamath/waystack/build/meson-private/tmp0svvcfbx/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 9)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp5ut98yhc
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp5ut98yhc/testfile.c -o /home/skamath/waystack/build/meson-private/tmp5ut98yhc/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 8)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpil96ok5g
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpil96ok5g/testfile.c -o /home/skamath/waystack/build/meson-private/tmpil96ok5g/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/
+programs: =/opt/tc/brcm/stbgcc-6.3-1.8/bin/../libexec/gcc/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../libexec/gcc/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/bin/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/bin/
+libraries: =/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/lib/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/lib/../lib64/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/lib/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/lib/../lib64/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/aarch64-unknown-linux-gnueabi/6.3.0/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/../lib64/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/lib/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/lib/:/opt/tc/brcm/stbgcc-6.3-1.8/bin/../aarch64-unknown-linux-gnueabi/sys-root/usr/lib/
+
+Compiler stderr:
+ 
+Library readline found: NO
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp8c9p4vpq
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp8c9p4vpq/testfile.c -o /home/skamath/waystack/build/meson-private/tmp8c9p4vpq/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lhistory -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/bin/ld: cannot find -lhistory
+collect2: error: ld returned 1 exit status
+
+Library history found: NO
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpykvtkgz9
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpykvtkgz9/testfile.c -o /home/skamath/waystack/build/meson-private/tmpykvtkgz9/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lws2_32 -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /opt/tc/brcm/stbgcc-6.3-1.8/bin/../lib/gcc/aarch64-unknown-linux-gnueabi/6.3.0/../../../../aarch64-unknown-linux-gnueabi/bin/ld: cannot find -lws2_32
+collect2: error: ld returned 1 exit status
+
+Library ws2_32 found: NO
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmptpt4z0vh
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmptpt4z0vh/testfile.c -o /home/skamath/waystack/build/meson-private/tmptpt4z0vh/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <sys/socket.h> int main(){getsockopt(1,1,1,0,(socklen_t*)0);}
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmptpt4z0vh/testfile.c:1:25: warning: extra tokens at end of #include directive
+ #include <sys/socket.h> int main(){getsockopt(1,1,1,0,(socklen_t*)0);}
+                         ^~~
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpjtyq6qhh
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpjtyq6qhh/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("arpa/inet.h")
+          #error "Header 'arpa/inet.h' could not be found"
+         #endif
+        #else
+         #include <arpa/inet.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "arpa/inet.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpcfy9b24z
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpcfy9b24z/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("arpa/nameser.h")
+          #error "Header 'arpa/nameser.h' could not be found"
+         #endif
+        #else
+         #include <arpa/nameser.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "arpa/nameser.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpv9932gtf
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpv9932gtf/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("dl.h")
+          #error "Header 'dl.h' could not be found"
+         #endif
+        #else
+         #include <dl.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpv9932gtf/testfile.c:4:12: error: #error "Header 'dl.h' could not be found"
+           #error "Header 'dl.h' could not be found"
+            ^~~~~
+
+Has header "dl.h" : NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpc6xz0yjc
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpc6xz0yjc/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("fcntl.h")
+          #error "Header 'fcntl.h' could not be found"
+         #endif
+        #else
+         #include <fcntl.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "fcntl.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp_rkyx7qs
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_rkyx7qs/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("float.h")
+          #error "Header 'float.h' could not be found"
+         #endif
+        #else
+         #include <float.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "float.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpp5m5cdkk
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpp5m5cdkk/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("inttypes.h")
+          #error "Header 'inttypes.h' could not be found"
+         #endif
+        #else
+         #include <inttypes.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "inttypes.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp7wipzubk
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp7wipzubk/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("netdb.h")
+          #error "Header 'netdb.h' could not be found"
+         #endif
+        #else
+         #include <netdb.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "netdb.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp6zi_orm8
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp6zi_orm8/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("netinet/in.h")
+          #error "Header 'netinet/in.h' could not be found"
+         #endif
+        #else
+         #include <netinet/in.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "netinet/in.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp42cq5uuj
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp42cq5uuj/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("poll.h")
+          #error "Header 'poll.h' could not be found"
+         #endif
+        #else
+         #include <poll.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "poll.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp19e1ib39
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp19e1ib39/testfile.c -E -P -pthread -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("pthread.h")
+          #error "Header 'pthread.h' could not be found"
+         #endif
+        #else
+         #include <pthread.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "pthread.h" with dependency threads: YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp_mljr7xs
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_mljr7xs/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("resolv.h")
+          #error "Header 'resolv.h' could not be found"
+         #endif
+        #else
+         #include <resolv.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "resolv.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmprfjpj_m2
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmprfjpj_m2/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("stdint.h")
+          #error "Header 'stdint.h' could not be found"
+         #endif
+        #else
+         #include <stdint.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "stdint.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpjjoomku7
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpjjoomku7/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/mman.h")
+          #error "Header 'sys/mman.h' could not be found"
+         #endif
+        #else
+         #include <sys/mman.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "sys/mman.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp7eeibcj_
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp7eeibcj_/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/select.h")
+          #error "Header 'sys/select.h' could not be found"
+         #endif
+        #else
+         #include <sys/select.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "sys/select.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpa92q_zbn
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpa92q_zbn/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/socket.h")
+          #error "Header 'sys/socket.h' could not be found"
+         #endif
+        #else
+         #include <sys/socket.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "sys/socket.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpx00lxdvq
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpx00lxdvq/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/stat.h")
+          #error "Header 'sys/stat.h' could not be found"
+         #endif
+        #else
+         #include <sys/stat.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "sys/stat.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpnlh4kysi
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpnlh4kysi/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/time.h")
+          #error "Header 'sys/time.h' could not be found"
+         #endif
+        #else
+         #include <sys/time.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "sys/time.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpywxor9sx
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpywxor9sx/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/timeb.h")
+          #error "Header 'sys/timeb.h' could not be found"
+         #endif
+        #else
+         #include <sys/timeb.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "sys/timeb.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpgyphdpci
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpgyphdpci/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/types.h")
+          #error "Header 'sys/types.h' could not be found"
+         #endif
+        #else
+         #include <sys/types.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "sys/types.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpo_ncd75q
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpo_ncd75q/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("unistd.h")
+          #error "Header 'unistd.h' could not be found"
+         #endif
+        #else
+         #include <unistd.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "unistd.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp_nqio_gv
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_nqio_gv/testfile.c -o /home/skamath/waystack/build/meson-private/tmp_nqio_gv/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define ftime meson_disable_define_of_ftime
+        
+        #include <limits.h>
+        #undef ftime
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char ftime (void);
+        
+        #if defined __stub_ftime || defined __stub___ftime
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return ftime ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "ftime" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmph4g5o1sr
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmph4g5o1sr/testfile.c -o /home/skamath/waystack/build/meson-private/tmph4g5o1sr/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define getaddrinfo meson_disable_define_of_getaddrinfo
+        
+        #include <limits.h>
+        #undef getaddrinfo
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char getaddrinfo (void);
+        
+        #if defined __stub_getaddrinfo || defined __stub___getaddrinfo
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return getaddrinfo ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "getaddrinfo" with dependency -lws2_32: YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp1j5le01u
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp1j5le01u/testfile.c -o /home/skamath/waystack/build/meson-private/tmp1j5le01u/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define gettimeofday meson_disable_define_of_gettimeofday
+        
+        #include <limits.h>
+        #undef gettimeofday
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char gettimeofday (void);
+        
+        #if defined __stub_gettimeofday || defined __stub___gettimeofday
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return gettimeofday ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "gettimeofday" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpq2ircwa6
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpq2ircwa6/testfile.c -o /home/skamath/waystack/build/meson-private/tmpq2ircwa6/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define isascii meson_disable_define_of_isascii
+        
+        #include <limits.h>
+        #undef isascii
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char isascii (void);
+        
+        #if defined __stub_isascii || defined __stub___isascii
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return isascii ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpq2ircwa6/testfile.c:10:14: warning: conflicting types for built-in function 'isascii'
+         char isascii (void);
+              ^~~~~~~
+
+Checking for function "isascii" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp6hppm9ta
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp6hppm9ta/testfile.c -o /home/skamath/waystack/build/meson-private/tmp6hppm9ta/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define mmap meson_disable_define_of_mmap
+        
+        #include <limits.h>
+        #undef mmap
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char mmap (void);
+        
+        #if defined __stub_mmap || defined __stub___mmap
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return mmap ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "mmap" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpq7wh7bag
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpq7wh7bag/testfile.c -o /home/skamath/waystack/build/meson-private/tmpq7wh7bag/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define munmap meson_disable_define_of_munmap
+        
+        #include <limits.h>
+        #undef munmap
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char munmap (void);
+        
+        #if defined __stub_munmap || defined __stub___munmap
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return munmap ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "munmap" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp1u42ffg9
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp1u42ffg9/testfile.c -o /home/skamath/waystack/build/meson-private/tmp1u42ffg9/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define putenv meson_disable_define_of_putenv
+        
+        #include <limits.h>
+        #undef putenv
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char putenv (void);
+        
+        #if defined __stub_putenv || defined __stub___putenv
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return putenv ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "putenv" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp_ndvvitj
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_ndvvitj/testfile.c -o /home/skamath/waystack/build/meson-private/tmp_ndvvitj/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define stat meson_disable_define_of_stat
+        
+        #include <limits.h>
+        #undef stat
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char stat (void);
+        
+        #if defined __stub_stat || defined __stub___stat
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return stat ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "stat" : YES 
+Configuring config.h using configuration
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmplflefcg4
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmplflefcg4/testfile.c -o /home/skamath/waystack/build/meson-private/tmplflefcg4/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+#include <limits.h>
+
+        #if defined __stub_printf || defined __stub___printf
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &printf;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "printf" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmptzekmrjg
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmptzekmrjg/testfile.c -o /home/skamath/waystack/build/meson-private/tmptzekmrjg/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+#include <limits.h>
+
+        #if defined __stub_sprintf || defined __stub___sprintf
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &sprintf;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "sprintf" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmppe8zrt8s
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmppe8zrt8s/testfile.c -o /home/skamath/waystack/build/meson-private/tmppe8zrt8s/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+#include <limits.h>
+
+        #if defined __stub_fprintf || defined __stub___fprintf
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &fprintf;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "fprintf" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp208hw149
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp208hw149/testfile.c -o /home/skamath/waystack/build/meson-private/tmp208hw149/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+#include <limits.h>
+
+        #if defined __stub_snprintf || defined __stub___snprintf
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &snprintf;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "snprintf" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpxacf8opg
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpxacf8opg/testfile.c -o /home/skamath/waystack/build/meson-private/tmpxacf8opg/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+#include <limits.h>
+
+        #if defined __stub_vfprintf || defined __stub___vfprintf
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &vfprintf;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "vfprintf" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmph1f4sd9p
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmph1f4sd9p/testfile.c -o /home/skamath/waystack/build/meson-private/tmph1f4sd9p/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+#include <limits.h>
+
+        #if defined __stub_vsprintf || defined __stub___vsprintf
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &vsprintf;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "vsprintf" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp6kt64ngr
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp6kt64ngr/testfile.c -o /home/skamath/waystack/build/meson-private/tmp6kt64ngr/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+#include <limits.h>
+
+        #if defined __stub_vsnprintf || defined __stub___vsnprintf
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &vsnprintf;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "vsnprintf" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpgjss2nwk
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpgjss2nwk/testfile.c -o /home/skamath/waystack/build/meson-private/tmpgjss2nwk/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+#include <limits.h>
+
+        #if defined __stub_sscanf || defined __stub___sscanf
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &sscanf;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "sscanf" : YES 
+Configuring xmlversion.h using configuration
+Adding test "dict"
+Build targets in project: 5
+Subproject libxml2 finished.
+
+
+Executing subproject libffi 
+
+Project name: libffi
+Project version: 3.4.4
+C compiler for the host machine: aarch64-linux-gnu-gcc (gcc 6.3.0 "aarch64-linux-gnu-gcc (crosstool-NG ) 6.3.0")
+C linker for the host machine: aarch64-linux-gnu-gcc ld.bfd 2.26.20160125
+C compiler for the build machine: ccache cc (gcc 9.4.0 "cc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0")
+C linker for the build machine: cc ld.bfd 2.34
+Running command: /usr/bin/python3 /home/skamath/waystack/subprojects/libffi-3.4.4/meson-scripts/extract-libtool-version.py /home/skamath/waystack/subprojects/libffi-3.4.4/libtool-version
+--- stdout ---
+9:2:1
+
+--- stderr ---
+
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpvtsxv7ik
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpvtsxv7ik/testfile.c -o /home/skamath/waystack/build/meson-private/tmpvtsxv7ik/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) {
+            size_t something;
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpbcvs4l4_
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpbcvs4l4_/testfile.c -o /home/skamath/waystack/build/meson-private/tmpbcvs4l4_/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(size_t) >= 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpkcdlphj1
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpkcdlphj1/testfile.c -o /home/skamath/waystack/build/meson-private/tmpkcdlphj1/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(size_t) > 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpts_6hqyd
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpts_6hqyd/testfile.c -o /home/skamath/waystack/build/meson-private/tmpts_6hqyd/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(size_t) > 1)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpp__t411p
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpp__t411p/testfile.c -o /home/skamath/waystack/build/meson-private/tmpp__t411p/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(size_t) > 3)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp23gcjjlr
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp23gcjjlr/testfile.c -o /home/skamath/waystack/build/meson-private/tmp23gcjjlr/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(size_t) > 7)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp6zlq5fk8
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp6zlq5fk8/testfile.c -o /home/skamath/waystack/build/meson-private/tmp6zlq5fk8/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(size_t) > 15)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmp6zlq5fk8/testfile.c: In function 'main':
+/home/skamath/waystack/build/meson-private/tmp6zlq5fk8/testfile.c:3:37: error: size of array 'a' is negative
+         int main(void) { static int a[1-2*!(sizeof(size_t) > 15)]; a[0]=0; return 0; }
+                                     ^
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpchddrrqq
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpchddrrqq/testfile.c -o /home/skamath/waystack/build/meson-private/tmpchddrrqq/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(size_t) <= 11)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpcwyy18h4
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpcwyy18h4/testfile.c -o /home/skamath/waystack/build/meson-private/tmpcwyy18h4/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(size_t) <= 9)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp7gvfuc5m
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp7gvfuc5m/testfile.c -o /home/skamath/waystack/build/meson-private/tmp7gvfuc5m/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(size_t) <= 8)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for size of "size_t" : 8
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpvknvspgv
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpvknvspgv/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("stdlib.h")
+          #error "Header 'stdlib.h' could not be found"
+         #endif
+        #else
+         #include <stdlib.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "stdlib.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp_sfhgo_s
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_sfhgo_s/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("string.h")
+          #error "Header 'string.h' could not be found"
+         #endif
+        #else
+         #include <string.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "string.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpdrx5khb6
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpdrx5khb6/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/memfd.h")
+          #error "Header 'sys/memfd.h' could not be found"
+         #endif
+        #else
+         #include <sys/memfd.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpdrx5khb6/testfile.c:4:12: error: #error "Header 'sys/memfd.h' could not be found"
+           #error "Header 'sys/memfd.h' could not be found"
+            ^~~~~
+
+Has header "sys/memfd.h" : NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpj1a4rksn
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpj1a4rksn/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("alloca.h")
+          #error "Header 'alloca.h' could not be found"
+         #endif
+        #else
+         #include <alloca.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "alloca.h" : YES 
+Using cached compile:
+Cached command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpp5m5cdkk/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("inttypes.h")
+          #error "Header 'inttypes.h' could not be found"
+         #endif
+        #else
+         #include <inttypes.h>
+        #endif
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Has header "inttypes.h" : YES (cached)
+Using cached compile:
+Cached command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmprfjpj_m2/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("stdint.h")
+          #error "Header 'stdint.h' could not be found"
+         #endif
+        #else
+         #include <stdint.h>
+        #endif
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Has header "stdint.h" : YES (cached)
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpnlm1bo8x
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpnlm1bo8x/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("stdio.h")
+          #error "Header 'stdio.h' could not be found"
+         #endif
+        #else
+         #include <stdio.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "stdio.h" : YES 
+Using cached compile:
+Cached command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpvknvspgv/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("stdlib.h")
+          #error "Header 'stdlib.h' could not be found"
+         #endif
+        #else
+         #include <stdlib.h>
+        #endif
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Has header "stdlib.h" : YES (cached)
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpn67k6_kr
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpn67k6_kr/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("strings.h")
+          #error "Header 'strings.h' could not be found"
+         #endif
+        #else
+         #include <strings.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "strings.h" : YES 
+Using cached compile:
+Cached command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_sfhgo_s/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("string.h")
+          #error "Header 'string.h' could not be found"
+         #endif
+        #else
+         #include <string.h>
+        #endif
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Has header "string.h" : YES (cached)
+Using cached compile:
+Cached command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpx00lxdvq/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/stat.h")
+          #error "Header 'sys/stat.h' could not be found"
+         #endif
+        #else
+         #include <sys/stat.h>
+        #endif
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Has header "sys/stat.h" : YES (cached)
+Using cached compile:
+Cached command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpgyphdpci/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/types.h")
+          #error "Header 'sys/types.h' could not be found"
+         #endif
+        #else
+         #include <sys/types.h>
+        #endif
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Has header "sys/types.h" : YES (cached)
+Using cached compile:
+Cached command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpo_ncd75q/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("unistd.h")
+          #error "Header 'unistd.h' could not be found"
+         #endif
+        #else
+         #include <unistd.h>
+        #endif
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Has header "unistd.h" : YES (cached)
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpabkn393z
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpabkn393z/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("dlfcn.h")
+          #error "Header 'dlfcn.h' could not be found"
+         #endif
+        #else
+         #include <dlfcn.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "dlfcn.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpk6h6o9y9
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpk6h6o9y9/testfile.c -o /home/skamath/waystack/build/meson-private/tmpk6h6o9y9/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define memfd_create meson_disable_define_of_memfd_create
+        
+        #include <limits.h>
+        #undef memfd_create
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char memfd_create (void);
+        
+        #if defined __stub_memfd_create || defined __stub___memfd_create
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return memfd_create ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/ccVoImeS.o: In function `main':
+testfile.c:(.text+0x8): undefined reference to `memfd_create'
+collect2: error: ld returned 1 exit status
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpmscljdu3
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpmscljdu3/testfile.c -o /home/skamath/waystack/build/meson-private/tmpmscljdu3/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        int main(void) {
+
+        /* With some toolchains (MSYS2/mingw for example) the compiler
+         * provides various builtins which are not really implemented and
+         * fall back to the stdlib where they aren't provided and fail at
+         * build/link time. In case the user provides a header, including
+         * the header didn't lead to the function being defined, and the
+         * function we are checking isn't a builtin itself we assume the
+         * builtin is not functional and we just error out. */
+        #if !1 && !defined(memfd_create) && !0
+            #error "No definition for __builtin_memfd_create found in the prefix"
+        #endif
+
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_memfd_create)
+                #error "__builtin_memfd_create not found"
+            #endif
+        #elif ! defined(memfd_create)
+            __builtin_memfd_create;
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpmscljdu3/testfile.c: In function 'main':
+/home/skamath/waystack/build/meson-private/tmpmscljdu3/testfile.c:20:13: error: '__builtin_memfd_create' undeclared (first use in this function)
+             __builtin_memfd_create;
+             ^~~~~~~~~~~~~~~~~~~~~~
+/home/skamath/waystack/build/meson-private/tmpmscljdu3/testfile.c:20:13: note: each undeclared identifier is reported only once for each function it appears in
+
+Checking for function "memfd_create" : NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpce6u46vp
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpce6u46vp/testfile.c -o /home/skamath/waystack/build/meson-private/tmpce6u46vp/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define memcpy meson_disable_define_of_memcpy
+        
+        #include <limits.h>
+        #undef memcpy
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char memcpy (void);
+        
+        #if defined __stub_memcpy || defined __stub___memcpy
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return memcpy ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpce6u46vp/testfile.c:10:14: warning: conflicting types for built-in function 'memcpy'
+         char memcpy (void);
+              ^~~~~~
+
+Checking for function "memcpy" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp9kdn6yl0
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp9kdn6yl0/testfile.c -o /home/skamath/waystack/build/meson-private/tmp9kdn6yl0/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) {
+            long double something;
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpnqzhn5it
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpnqzhn5it/testfile.c -o /home/skamath/waystack/build/meson-private/tmpnqzhn5it/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) >= 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp3f25_m5f
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp3f25_m5f/testfile.c -o /home/skamath/waystack/build/meson-private/tmp3f25_m5f/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) > 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp8swj1dir
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp8swj1dir/testfile.c -o /home/skamath/waystack/build/meson-private/tmp8swj1dir/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) > 1)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp0ta5dz8f
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp0ta5dz8f/testfile.c -o /home/skamath/waystack/build/meson-private/tmp0ta5dz8f/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) > 3)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp1qk5bvf_
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp1qk5bvf_/testfile.c -o /home/skamath/waystack/build/meson-private/tmp1qk5bvf_/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) > 7)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpz2rgvyr2
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpz2rgvyr2/testfile.c -o /home/skamath/waystack/build/meson-private/tmpz2rgvyr2/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) > 15)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpt3ft3cwu
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpt3ft3cwu/testfile.c -o /home/skamath/waystack/build/meson-private/tmpt3ft3cwu/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) > 31)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpt3ft3cwu/testfile.c: In function 'main':
+/home/skamath/waystack/build/meson-private/tmpt3ft3cwu/testfile.c:3:37: error: size of array 'a' is negative
+         int main(void) { static int a[1-2*!(sizeof(long double) > 31)]; a[0]=0; return 0; }
+                                     ^
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpraek3v1_
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpraek3v1_/testfile.c -o /home/skamath/waystack/build/meson-private/tmpraek3v1_/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) <= 23)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp_p88pxsc
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_p88pxsc/testfile.c -o /home/skamath/waystack/build/meson-private/tmp_p88pxsc/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) <= 19)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpzw6s8uf4
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpzw6s8uf4/testfile.c -o /home/skamath/waystack/build/meson-private/tmpzw6s8uf4/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) <= 17)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp_q_ycbdp
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_q_ycbdp/testfile.c -o /home/skamath/waystack/build/meson-private/tmp_q_ycbdp/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(long double) <= 16)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for size of "long double" : 16
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp89htvd1d
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp89htvd1d/testfile.c -o /home/skamath/waystack/build/meson-private/tmp89htvd1d/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) {
+            double something;
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp_emi_ly7
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_emi_ly7/testfile.c -o /home/skamath/waystack/build/meson-private/tmp_emi_ly7/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(double) >= 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpjd2d2qsk
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpjd2d2qsk/testfile.c -o /home/skamath/waystack/build/meson-private/tmpjd2d2qsk/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(double) > 0)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpc1sc_bf0
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpc1sc_bf0/testfile.c -o /home/skamath/waystack/build/meson-private/tmpc1sc_bf0/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(double) > 1)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpgpokxqfm
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpgpokxqfm/testfile.c -o /home/skamath/waystack/build/meson-private/tmpgpokxqfm/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(double) > 3)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpdsn2pd3w
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpdsn2pd3w/testfile.c -o /home/skamath/waystack/build/meson-private/tmpdsn2pd3w/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(double) > 7)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp4nuzl3nj
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp4nuzl3nj/testfile.c -o /home/skamath/waystack/build/meson-private/tmp4nuzl3nj/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(double) > 15)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmp4nuzl3nj/testfile.c: In function 'main':
+/home/skamath/waystack/build/meson-private/tmp4nuzl3nj/testfile.c:3:37: error: size of array 'a' is negative
+         int main(void) { static int a[1-2*!(sizeof(double) > 15)]; a[0]=0; return 0; }
+                                     ^
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp90qdjhx3
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp90qdjhx3/testfile.c -o /home/skamath/waystack/build/meson-private/tmp90qdjhx3/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(double) <= 11)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpd88_i02x
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpd88_i02x/testfile.c -o /home/skamath/waystack/build/meson-private/tmpd88_i02x/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(double) <= 9)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmphekjjk5u
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmphekjjk5u/testfile.c -o /home/skamath/waystack/build/meson-private/tmphekjjk5u/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <stdio.h>
+        
+        int main(void) { static int a[1-2*!(sizeof(double) <= 8)]; a[0]=0; return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for size of "double" : 8
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpnia2734p
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpnia2734p/testfile.c -o /home/skamath/waystack/build/meson-private/tmpnia2734p/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ asm (".cfi_sections\n.cfi_startproc\n.cfi_endproc");
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking if "ASM .cfi" compiles: YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpv7bktcuy
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpv7bktcuy/testfile.c -o /home/skamath/waystack/build/meson-private/tmpv7bktcuy/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+#ifdef __clang__
+# if __has_feature(ptrauth_calls)
+#  define HAVE_PTRAUTH 1
+# endif
+#endif
+
+#ifndef HAVE_PTRAUTH
+# error Pointer authentication not supported
+#endif
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpv7bktcuy/testfile.c:9:3: error: #error Pointer authentication not supported
+ # error Pointer authentication not supported
+   ^~~~~
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp0brn7fi1
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp0brn7fi1/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifndef __USER_LABEL_PREFIX__
+        #define MESON_UNDERSCORE_PREFIX unsupported
+        #else
+        #define MESON_UNDERSCORE_PREFIX __USER_LABEL_PREFIX__
+        #endif
+        "MESON_HAVE_UNDERSCORE_DELIMITER" MESON_UNDERSCORE_PREFIX
+        
+Compiler stdout:
+         "MESON_HAVE_UNDERSCORE_DELIMITER"
+
+Compiler stderr:
+ 
+Queried compiler for function prefix: __USER_LABEL_PREFIX__ is ""
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp2jiexu5k
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp2jiexu5k/testfile.c -o /home/skamath/waystack/build/meson-private/tmp2jiexu5k/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fno-lto 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fno-lto: YES 
+Running command: /usr/bin/python3 /home/skamath/waystack/subprojects/libffi-3.4.4/meson-scripts/test-ro-eh-frame.py aarch64-linux-gnu-gcc -fpic -fexceptions -fno-lto
+--- stdout ---
+
+--- stderr ---
+Traceback (most recent call last):
+  File "/home/skamath/waystack/subprojects/libffi-3.4.4/meson-scripts/test-ro-eh-frame.py", line 21, in <module>
+    stdout = subprocess.check_output(['readelf', '-WS', outfile], stdout=subprocess.PIPE, universal_newlines=True)
+  File "/usr/lib/python3.8/subprocess.py", line 404, in check_output
+    raise ValueError('stdout argument not allowed, it will be overridden.')
+ValueError: stdout argument not allowed, it will be overridden.
+
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpk5ny8zj0
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpk5ny8zj0/testfile.c -o /home/skamath/waystack/build/meson-private/tmpk5ny8zj0/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=attributes 
+
+Code:
+ 
+        int foo_def(void) __attribute__((visibility("default")));
+        int foo_hid(void) __attribute__((visibility("hidden")));
+        int foo_int(void) __attribute__((visibility("internal")));
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports function attribute visibility: YES 
+Running command: /usr/bin/python3 /home/skamath/waystack/subprojects/libffi-3.4.4/meson-scripts/test-cc-supports-hidden-visibility.py aarch64-linux-gnu-gcc
+--- stdout ---
+
+--- stderr ---
+
+
+Message: .hidden pseudo-op is available
+Configuring fficonfig.h using configuration
+Configuring ffi.h using configuration
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp5wseywc7
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp5wseywc7/testfile.c -o /home/skamath/waystack/build/meson-private/tmp5wseywc7/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--fatal-warnings -Wl,--version-script=/home/skamath/waystack/subprojects/libffi-3.4.4/libffi.map.in 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports link arguments -Wl,--version-script=/home/skamath/waystack/subprojects/libffi-3.4.4/libffi.map.in: YES 
+C++ compiler for the host machine: aarch64-linux-gnu-g++ (gcc 6.3.0 "aarch64-linux-gnu-g++ (crosstool-NG ) 6.3.0")
+C++ linker for the host machine: aarch64-linux-gnu-g++ ld.bfd 2.26.20160125
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpx4m_vtt_
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpx4m_vtt_/testfile.c -o /home/skamath/waystack/build/meson-private/tmpx4m_vtt_/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+#include <ffi.h>"
+#ifdef __i386__
+/* OK */
+#else
+#error Failed #ifdef __i386__
+#endif
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpx4m_vtt_/testfile.c:2:17: warning: missing terminating " character
+ #include <ffi.h>"
+                 ^
+/home/skamath/waystack/build/meson-private/tmpx4m_vtt_/testfile.c:2:17: warning: extra tokens at end of #include directive
+/home/skamath/waystack/build/meson-private/tmpx4m_vtt_/testfile.c:2:18: fatal error: ffi.h: No such file or directory
+ #include <ffi.h>"
+                  ^
+compilation terminated.
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpub6a_1lo
+Command line:  aarch64-linux-gnu-gcc -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/.. -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/../include -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/aarch64 /home/skamath/waystack/build/meson-private/tmpub6a_1lo/testfile.c -o /home/skamath/waystack/build/meson-private/tmpub6a_1lo/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+#include <ffi.h>"
+#if FFI_CLOSURES
+/* OK */
+#else
+#error Failed #if FFI_CLOSURES
+#endif
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpub6a_1lo/testfile.c:2:17: warning: missing terminating " character
+ #include <ffi.h>"
+                 ^
+/home/skamath/waystack/build/meson-private/tmpub6a_1lo/testfile.c:2:17: warning: extra tokens at end of #include directive
+/home/skamath/waystack/build/meson-private/tmpub6a_1lo/testfile.c:2:18: fatal error: ffi.h: No such file or directory
+ #include <ffi.h>"
+                  ^
+compilation terminated.
+
+Adding test "test-call -O0 -DDGTEST=1"
+Adding test "test-call -O0 -DDGTEST=2"
+Adding test "test-call -O0 -DDGTEST=3"
+Adding test "test-call -O0 -DDGTEST=4"
+Adding test "test-call -O0 -DDGTEST=5"
+Adding test "test-call -O0 -DDGTEST=6"
+Adding test "test-call -O0 -DDGTEST=7"
+Adding test "test-call -O0 -DDGTEST=8"
+Adding test "test-call -O0 -DDGTEST=9"
+Adding test "test-call -O0 -DDGTEST=10"
+Adding test "test-call -O0 -DDGTEST=11"
+Adding test "test-call -O0 -DDGTEST=12"
+Adding test "test-call -O0 -DDGTEST=13"
+Adding test "test-call -O0 -DDGTEST=14"
+Adding test "test-call -O0 -DDGTEST=15"
+Adding test "test-call -O0 -DDGTEST=16"
+Adding test "test-call -O0 -DDGTEST=17"
+Adding test "test-call -O0 -DDGTEST=18"
+Adding test "test-call -O0 -DDGTEST=19"
+Adding test "test-call -O0 -DDGTEST=20"
+Adding test "test-call -O0 -DDGTEST=21"
+Adding test "test-call -O0 -DDGTEST=22"
+Adding test "test-call -O0 -DDGTEST=23"
+Adding test "test-call -O0 -DDGTEST=24"
+Adding test "test-call -O0 -DDGTEST=25"
+Adding test "test-call -O0 -DDGTEST=26"
+Adding test "test-call -O0 -DDGTEST=27"
+Adding test "test-call -O0 -DDGTEST=28"
+Adding test "test-call -O0 -DDGTEST=29"
+Adding test "test-call -O0 -DDGTEST=30"
+Adding test "test-call -O0 -DDGTEST=31"
+Adding test "test-call -O0 -DDGTEST=32"
+Adding test "test-call -O0 -DDGTEST=33"
+Adding test "test-call -O0 -DDGTEST=34"
+Adding test "test-call -O0 -DDGTEST=35"
+Adding test "test-call -O0 -DDGTEST=36"
+Adding test "test-call -O0 -DDGTEST=37"
+Adding test "test-call -O0 -DDGTEST=38"
+Adding test "test-call -O0 -DDGTEST=39"
+Adding test "test-call -O0 -DDGTEST=40"
+Adding test "test-call -O0 -DDGTEST=41"
+Adding test "test-call -O0 -DDGTEST=42"
+Adding test "test-call -O0 -DDGTEST=43"
+Adding test "test-call -O0 -DDGTEST=44"
+Adding test "test-call -O0 -DDGTEST=45"
+Adding test "test-call -O0 -DDGTEST=46"
+Adding test "test-call -O0 -DDGTEST=47"
+Adding test "test-call -O0 -DDGTEST=48"
+Adding test "test-call -O0 -DDGTEST=49"
+Adding test "test-call -O0 -DDGTEST=50"
+Adding test "test-call -O0 -DDGTEST=51"
+Adding test "test-call -O0 -DDGTEST=52"
+Adding test "test-call -O0 -DDGTEST=53"
+Adding test "test-call -O0 -DDGTEST=54"
+Adding test "test-call -O0 -DDGTEST=55"
+Adding test "test-call -O0 -DDGTEST=56"
+Adding test "test-call -O0 -DDGTEST=57"
+Adding test "test-call -O0 -DDGTEST=58"
+Adding test "test-call -O0 -DDGTEST=59"
+Adding test "test-call -O0 -DDGTEST=60"
+Adding test "test-call -O0 -DDGTEST=61"
+Adding test "test-call -O0 -DDGTEST=62"
+Adding test "test-call -O0 -DDGTEST=63"
+Adding test "test-call -O0 -DDGTEST=64"
+Adding test "test-call -O0 -DDGTEST=65"
+Adding test "test-call -O0 -DDGTEST=66"
+Adding test "test-call -O0 -DDGTEST=67"
+Adding test "test-call -O0 -DDGTEST=68"
+Adding test "test-call -O0 -DDGTEST=69"
+Adding test "test-call -O0 -DDGTEST=70"
+Adding test "test-call -O0 -DDGTEST=71"
+Adding test "test-call -O0 -DDGTEST=72"
+Adding test "test-call -O0 -DDGTEST=73"
+Adding test "test-call -O0 -DDGTEST=74"
+Adding test "test-call -O0 -DDGTEST=75"
+Adding test "test-call -O0 -DDGTEST=76"
+Adding test "test-call -O0 -DDGTEST=77"
+Adding test "test-call -O0 -DDGTEST=78"
+Adding test "test-call -O0 -DDGTEST=79"
+Adding test "test-call -O0 -DDGTEST=80"
+Adding test "test-call -O0 -DDGTEST=81"
+Adding test "test-call -O2 -DDGTEST=1"
+Adding test "test-call -O2 -DDGTEST=2"
+Adding test "test-call -O2 -DDGTEST=3"
+Adding test "test-call -O2 -DDGTEST=4"
+Adding test "test-call -O2 -DDGTEST=5"
+Adding test "test-call -O2 -DDGTEST=6"
+Adding test "test-call -O2 -DDGTEST=7"
+Adding test "test-call -O2 -DDGTEST=8"
+Adding test "test-call -O2 -DDGTEST=9"
+Adding test "test-call -O2 -DDGTEST=10"
+Adding test "test-call -O2 -DDGTEST=11"
+Adding test "test-call -O2 -DDGTEST=12"
+Adding test "test-call -O2 -DDGTEST=13"
+Adding test "test-call -O2 -DDGTEST=14"
+Adding test "test-call -O2 -DDGTEST=15"
+Adding test "test-call -O2 -DDGTEST=16"
+Adding test "test-call -O2 -DDGTEST=17"
+Adding test "test-call -O2 -DDGTEST=18"
+Adding test "test-call -O2 -DDGTEST=19"
+Adding test "test-call -O2 -DDGTEST=20"
+Adding test "test-call -O2 -DDGTEST=21"
+Adding test "test-call -O2 -DDGTEST=22"
+Adding test "test-call -O2 -DDGTEST=23"
+Adding test "test-call -O2 -DDGTEST=24"
+Adding test "test-call -O2 -DDGTEST=25"
+Adding test "test-call -O2 -DDGTEST=26"
+Adding test "test-call -O2 -DDGTEST=27"
+Adding test "test-call -O2 -DDGTEST=28"
+Adding test "test-call -O2 -DDGTEST=29"
+Adding test "test-call -O2 -DDGTEST=30"
+Adding test "test-call -O2 -DDGTEST=31"
+Adding test "test-call -O2 -DDGTEST=32"
+Adding test "test-call -O2 -DDGTEST=33"
+Adding test "test-call -O2 -DDGTEST=34"
+Adding test "test-call -O2 -DDGTEST=35"
+Adding test "test-call -O2 -DDGTEST=36"
+Adding test "test-call -O2 -DDGTEST=37"
+Adding test "test-call -O2 -DDGTEST=38"
+Adding test "test-call -O2 -DDGTEST=39"
+Adding test "test-call -O2 -DDGTEST=40"
+Adding test "test-call -O2 -DDGTEST=41"
+Adding test "test-call -O2 -DDGTEST=42"
+Adding test "test-call -O2 -DDGTEST=43"
+Adding test "test-call -O2 -DDGTEST=44"
+Adding test "test-call -O2 -DDGTEST=45"
+Adding test "test-call -O2 -DDGTEST=46"
+Adding test "test-call -O2 -DDGTEST=47"
+Adding test "test-call -O2 -DDGTEST=48"
+Adding test "test-call -O2 -DDGTEST=49"
+Adding test "test-call -O2 -DDGTEST=50"
+Adding test "test-call -O2 -DDGTEST=51"
+Adding test "test-call -O2 -DDGTEST=52"
+Adding test "test-call -O2 -DDGTEST=53"
+Adding test "test-call -O2 -DDGTEST=54"
+Adding test "test-call -O2 -DDGTEST=55"
+Adding test "test-call -O2 -DDGTEST=56"
+Adding test "test-call -O2 -DDGTEST=57"
+Adding test "test-call -O2 -DDGTEST=58"
+Adding test "test-call -O2 -DDGTEST=59"
+Adding test "test-call -O2 -DDGTEST=60"
+Adding test "test-call -O2 -DDGTEST=61"
+Adding test "test-call -O2 -DDGTEST=62"
+Adding test "test-call -O2 -DDGTEST=63"
+Adding test "test-call -O2 -DDGTEST=64"
+Adding test "test-call -O2 -DDGTEST=65"
+Adding test "test-call -O2 -DDGTEST=66"
+Adding test "test-call -O2 -DDGTEST=67"
+Adding test "test-call -O2 -DDGTEST=68"
+Adding test "test-call -O2 -DDGTEST=69"
+Adding test "test-call -O2 -DDGTEST=70"
+Adding test "test-call -O2 -DDGTEST=71"
+Adding test "test-call -O2 -DDGTEST=72"
+Adding test "test-call -O2 -DDGTEST=73"
+Adding test "test-call -O2 -DDGTEST=74"
+Adding test "test-call -O2 -DDGTEST=75"
+Adding test "test-call -O2 -DDGTEST=76"
+Adding test "test-call -O2 -DDGTEST=77"
+Adding test "test-call -O2 -DDGTEST=78"
+Adding test "test-call -O2 -DDGTEST=79"
+Adding test "test-call -O2 -DDGTEST=80"
+Adding test "test-call -O2 -DDGTEST=81"
+Adding test "align_mixed -O0"
+Adding test "align_mixed -O2"
+Adding test "align_stdcall -O0"
+Adding test "align_stdcall -O2"
+Adding test "bpo-38748 -O0"
+Adding test "bpo-38748 -O2"
+Adding test "err_bad_typedef -O0"
+Adding test "err_bad_typedef -O2"
+Adding test "float1 -O0"
+Adding test "float1 -O2"
+Adding test "float2 -O0"
+Adding test "float2 -O2"
+Adding test "float3 -O0"
+Adding test "float3 -O2"
+Adding test "float4 -O0"
+Adding test "float4 -O2"
+Adding test "float -O0"
+Adding test "float -O2"
+Adding test "float_va -O0"
+Adding test "float_va -O2"
+Adding test "many2 -O0"
+Adding test "many2 -O2"
+Adding test "many -O0"
+Adding test "many -O2"
+Adding test "many_double -O0"
+Adding test "many_double -O2"
+Adding test "many_mixed -O0"
+Adding test "many_mixed -O2"
+Adding test "negint -O0"
+Adding test "negint -O2"
+Adding test "offsets -O0"
+Adding test "offsets -O2"
+Adding test "pr1172638 -O0"
+Adding test "pr1172638 -O2"
+Adding test "promotion -O0"
+Adding test "promotion -O2"
+Adding test "pyobjc_tc -O0"
+Adding test "pyobjc_tc -O2"
+Adding test "return_dbl1 -O0"
+Adding test "return_dbl1 -O2"
+Adding test "return_dbl2 -O0"
+Adding test "return_dbl2 -O2"
+Adding test "return_dbl -O0"
+Adding test "return_dbl -O2"
+Adding test "return_fl1 -O0"
+Adding test "return_fl1 -O2"
+Adding test "return_fl2 -O0"
+Adding test "return_fl2 -O2"
+Adding test "return_fl3 -O0"
+Adding test "return_fl3 -O2"
+Adding test "return_fl -O0"
+Adding test "return_fl -O2"
+Adding test "return_ldl -O0"
+Adding test "return_ldl -O2"
+Adding test "return_ll1 -O0"
+Adding test "return_ll1 -O2"
+Adding test "return_ll -O0"
+Adding test "return_ll -O2"
+Adding test "return_sc -O0"
+Adding test "return_sc -O2"
+Adding test "return_sl -O0"
+Adding test "return_sl -O2"
+Adding test "return_uc -O0"
+Adding test "return_uc -O2"
+Adding test "return_ul -O0"
+Adding test "return_ul -O2"
+Adding test "s55 -O0"
+Adding test "s55 -O2"
+Adding test "strlen2 -O0"
+Adding test "strlen2 -O2"
+Adding test "strlen3 -O0"
+Adding test "strlen3 -O2"
+Adding test "strlen4 -O0"
+Adding test "strlen4 -O2"
+Adding test "strlen -O0"
+Adding test "strlen -O2"
+Adding test "struct10 -O0"
+Adding test "struct10 -O2"
+Adding test "struct1 -O0"
+Adding test "struct1 -O2"
+Adding test "struct2 -O0"
+Adding test "struct2 -O2"
+Adding test "struct3 -O0"
+Adding test "struct3 -O2"
+Adding test "struct4 -O0"
+Adding test "struct4 -O2"
+Adding test "struct5 -O0"
+Adding test "struct5 -O2"
+Adding test "struct6 -O0"
+Adding test "struct6 -O2"
+Adding test "struct7 -O0"
+Adding test "struct7 -O2"
+Adding test "struct8 -O0"
+Adding test "struct8 -O2"
+Adding test "struct9 -O0"
+Adding test "struct9 -O2"
+Adding test "struct_by_value_2 -O0"
+Adding test "struct_by_value_2 -O2"
+Adding test "struct_by_value_3 -O0"
+Adding test "struct_by_value_3 -O2"
+Adding test "struct_by_value_4 -O0"
+Adding test "struct_by_value_4 -O2"
+Adding test "struct_by_value_big -O0"
+Adding test "struct_by_value_big -O2"
+Adding test "struct_by_value_small -O0"
+Adding test "struct_by_value_small -O2"
+Adding test "uninitialized -O0"
+Adding test "uninitialized -O2"
+Adding test "va_1 -O0"
+Adding test "va_1 -O2"
+Adding test "va_2 -O0"
+Adding test "va_2 -O2"
+Adding test "va_3 -O0"
+Adding test "va_3 -O2"
+Adding test "va_struct1 -O0"
+Adding test "va_struct1 -O2"
+Adding test "va_struct2 -O0"
+Adding test "va_struct2 -O2"
+Adding test "va_struct3 -O0"
+Adding test "va_struct3 -O2"
+Using cached compile:
+Cached command line:  aarch64-linux-gnu-gcc -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/.. -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/../include -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/aarch64 /home/skamath/waystack/build/meson-private/tmpub6a_1lo/testfile.c -o /home/skamath/waystack/build/meson-private/tmpub6a_1lo/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+#include <ffi.h>"
+#if FFI_CLOSURES
+/* OK */
+#else
+#error Failed #if FFI_CLOSURES
+#endif
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpub6a_1lo/testfile.c:2:17: warning: missing terminating " character
+ #include <ffi.h>"
+                 ^
+/home/skamath/waystack/build/meson-private/tmpub6a_1lo/testfile.c:2:17: warning: extra tokens at end of #include directive
+/home/skamath/waystack/build/meson-private/tmpub6a_1lo/testfile.c:2:18: fatal error: ffi.h: No such file or directory
+ #include <ffi.h>"
+                  ^
+compilation terminated.
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp84lmrlbe
+Command line:  aarch64-linux-gnu-gcc -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/.. -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/../include -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/aarch64 /home/skamath/waystack/build/meson-private/tmp84lmrlbe/testfile.c -o /home/skamath/waystack/build/meson-private/tmp84lmrlbe/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+#include <ffi.h>"
+#ifdef FFI_TARGET_HAS_COMPLEX_TYPE
+/* OK */
+#else
+#error Failed #ifdef FFI_TARGET_HAS_COMPLEX_TYPE
+#endif
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmp84lmrlbe/testfile.c:2:17: warning: missing terminating " character
+ #include <ffi.h>"
+                 ^
+/home/skamath/waystack/build/meson-private/tmp84lmrlbe/testfile.c:2:17: warning: extra tokens at end of #include directive
+/home/skamath/waystack/build/meson-private/tmp84lmrlbe/testfile.c:2:18: fatal error: ffi.h: No such file or directory
+ #include <ffi.h>"
+                  ^
+compilation terminated.
+
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpoombsf8i
+Command line:  aarch64-linux-gnu-gcc -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/.. -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/../include -I/home/skamath/waystack/subprojects/libffi-3.4.4/src/aarch64 /home/skamath/waystack/build/meson-private/tmpoombsf8i/testfile.c -o /home/skamath/waystack/build/meson-private/tmpoombsf8i/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+#include <ffi.h>"
+#if FFI_GO_CLOSURES
+/* OK */
+#else
+#error Failed #if FFI_GO_CLOSURES
+#endif
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpoombsf8i/testfile.c:2:17: warning: missing terminating " character
+ #include <ffi.h>"
+                 ^
+/home/skamath/waystack/build/meson-private/tmpoombsf8i/testfile.c:2:17: warning: extra tokens at end of #include directive
+/home/skamath/waystack/build/meson-private/tmpoombsf8i/testfile.c:2:18: fatal error: ffi.h: No such file or directory
+ #include <ffi.h>"
+                  ^
+compilation terminated.
+
+Build targets in project: 289
+Subproject libffi finished.
+
+
+Executing subproject wayland 
+
+Project name: wayland
+Project version: 1.20.0
+C compiler for the host machine: aarch64-linux-gnu-gcc (gcc 6.3.0 "aarch64-linux-gnu-gcc (crosstool-NG ) 6.3.0")
+C linker for the host machine: aarch64-linux-gnu-gcc ld.bfd 2.26.20160125
+C compiler for the build machine: ccache cc (gcc 9.4.0 "cc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0")
+C linker for the build machine: cc ld.bfd 2.34
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpjz_uzfa_
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpjz_uzfa_/testfile.c -o /home/skamath/waystack/build/meson-private/tmpjz_uzfa_/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused-parameter -Wno-unused-parameter 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp_gjrejf6
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_gjrejf6/testfile.c -o /home/skamath/waystack/build/meson-private/tmp_gjrejf6/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wstrict-prototypes 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpppw4_yiy
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpppw4_yiy/testfile.c -o /home/skamath/waystack/build/meson-private/tmpppw4_yiy/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-prototypes 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpzhk8r2ye
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpzhk8r2ye/testfile.c -o /home/skamath/waystack/build/meson-private/tmpzhk8r2ye/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fvisibility=hidden 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpa86i1eod
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpa86i1eod/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/prctl.h")
+          #error "Header 'sys/prctl.h' could not be found"
+         #endif
+        #else
+         #include <sys/prctl.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "sys/prctl.h" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpgcdq996a
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpgcdq996a/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/procctl.h")
+          #error "Header 'sys/procctl.h' could not be found"
+         #endif
+        #else
+         #include <sys/procctl.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpgcdq996a/testfile.c:4:12: error: #error "Header 'sys/procctl.h' could not be found"
+           #error "Header 'sys/procctl.h' could not be found"
+            ^~~~~
+
+Has header "sys/procctl.h" : NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpgwpekqkr
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpgwpekqkr/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/ucred.h")
+          #error "Header 'sys/ucred.h' could not be found"
+         #endif
+        #else
+         #include <sys/ucred.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpgwpekqkr/testfile.c:4:12: error: #error "Header 'sys/ucred.h' could not be found"
+           #error "Header 'sys/ucred.h' could not be found"
+            ^~~~~
+
+Has header "sys/ucred.h" : NO 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp37aulgm2
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp37aulgm2/testfile.c -o /home/skamath/waystack/build/meson-private/tmp37aulgm2/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define accept4 meson_disable_define_of_accept4
+        
+        #include <limits.h>
+        #undef accept4
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char accept4 (void);
+        
+        #if defined __stub_accept4 || defined __stub___accept4
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return accept4 ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "accept4" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpfjovbbg3
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpfjovbbg3/testfile.c -o /home/skamath/waystack/build/meson-private/tmpfjovbbg3/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define mkostemp meson_disable_define_of_mkostemp
+        
+        #include <limits.h>
+        #undef mkostemp
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char mkostemp (void);
+        
+        #if defined __stub_mkostemp || defined __stub___mkostemp
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return mkostemp ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "mkostemp" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpqr16_pjt
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpqr16_pjt/testfile.c -o /home/skamath/waystack/build/meson-private/tmpqr16_pjt/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define posix_fallocate meson_disable_define_of_posix_fallocate
+        
+        #include <limits.h>
+        #undef posix_fallocate
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char posix_fallocate (void);
+        
+        #if defined __stub_posix_fallocate || defined __stub___posix_fallocate
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return posix_fallocate ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "posix_fallocate" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpwiq7tw0e
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpwiq7tw0e/testfile.c -o /home/skamath/waystack/build/meson-private/tmpwiq7tw0e/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define prctl meson_disable_define_of_prctl
+        
+        #include <limits.h>
+        #undef prctl
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char prctl (void);
+        
+        #if defined __stub_prctl || defined __stub___prctl
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return prctl ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "prctl" : YES 
+Using cached compile:
+Cached command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpk6h6o9y9/testfile.c -o /home/skamath/waystack/build/meson-private/tmpk6h6o9y9/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define memfd_create meson_disable_define_of_memfd_create
+        
+        #include <limits.h>
+        #undef memfd_create
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char memfd_create (void);
+        
+        #if defined __stub_memfd_create || defined __stub___memfd_create
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return memfd_create ();
+        }
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /tmp/ccVoImeS.o: In function `main':
+testfile.c:(.text+0x8): undefined reference to `memfd_create'
+collect2: error: ld returned 1 exit status
+
+Using cached compile:
+Cached command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpmscljdu3/testfile.c -o /home/skamath/waystack/build/meson-private/tmpmscljdu3/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        int main(void) {
+
+        /* With some toolchains (MSYS2/mingw for example) the compiler
+         * provides various builtins which are not really implemented and
+         * fall back to the stdlib where they aren't provided and fail at
+         * build/link time. In case the user provides a header, including
+         * the header didn't lead to the function being defined, and the
+         * function we are checking isn't a builtin itself we assume the
+         * builtin is not functional and we just error out. */
+        #if !1 && !defined(memfd_create) && !0
+            #error "No definition for __builtin_memfd_create found in the prefix"
+        #endif
+
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_memfd_create)
+                #error "__builtin_memfd_create not found"
+            #endif
+        #elif ! defined(memfd_create)
+            __builtin_memfd_create;
+        #endif
+        return 0;
+        }
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmpmscljdu3/testfile.c: In function 'main':
+/home/skamath/waystack/build/meson-private/tmpmscljdu3/testfile.c:20:13: error: '__builtin_memfd_create' undeclared (first use in this function)
+             __builtin_memfd_create;
+             ^~~~~~~~~~~~~~~~~~~~~~
+/home/skamath/waystack/build/meson-private/tmpmscljdu3/testfile.c:20:13: note: each undeclared identifier is reported only once for each function it appears in
+
+Checking for function "memfd_create" : NO (cached)
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpkmqxceqw
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpkmqxceqw/testfile.c -o /home/skamath/waystack/build/meson-private/tmpkmqxceqw/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define mremap meson_disable_define_of_mremap
+        
+        #include <limits.h>
+        #undef mremap
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char mremap (void);
+        
+        #if defined __stub_mremap || defined __stub___mremap
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return mremap ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "mremap" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp_8avozle
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp_8avozle/testfile.c -o /home/skamath/waystack/build/meson-private/tmp_8avozle/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #define strndup meson_disable_define_of_strndup
+        
+        #include <limits.h>
+        #undef strndup
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char strndup (void);
+        
+        #if defined __stub_strndup || defined __stub___strndup
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return strndup ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmp_8avozle/testfile.c:10:14: warning: conflicting types for built-in function 'strndup'
+         char strndup (void);
+              ^~~~~~~
+
+Checking for function "strndup" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmp8kzi9mw2
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmp8kzi9mw2/testfile.c -o /home/skamath/waystack/build/meson-private/tmp8kzi9mw2/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <sys/ucred.h>
+        void bar(void) {
+            struct xucred foo;
+            foo.cr_pid;
+
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/skamath/waystack/build/meson-private/tmp8kzi9mw2/testfile.c:1:23: fatal error: sys/ucred.h: No such file or directory
+ #include <sys/ucred.h>
+                       ^
+compilation terminated.
+
+Checking whether type "struct xucred" has member "cr_pid" : NO 
+Dependency libffi found: YES 3.4.4 (overridden)
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpmzkki42q
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpmzkki42q/testfile.c -o /home/skamath/waystack/build/meson-private/tmpmzkki42q/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <sys/signalfd.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef SFD_CLOEXEC
+                SFD_CLOEXEC;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header "sys/signalfd.h" has symbol "SFD_CLOEXEC" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpuy5cpjvu
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpuy5cpjvu/testfile.c -o /home/skamath/waystack/build/meson-private/tmpuy5cpjvu/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <sys/timerfd.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef TFD_CLOEXEC
+                TFD_CLOEXEC;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header "sys/timerfd.h" has symbol "TFD_CLOEXEC" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmplxstgwv6
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmplxstgwv6/testfile.c -o /home/skamath/waystack/build/meson-private/tmplxstgwv6/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ 
+        #include <time.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef CLOCK_MONOTONIC
+                CLOCK_MONOTONIC;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header "time.h" has symbol "CLOCK_MONOTONIC" : YES 
+Running compile:
+Working directory:  /home/skamath/waystack/build/meson-private/tmpse91ig1n
+Command line:  aarch64-linux-gnu-gcc /home/skamath/waystack/build/meson-private/tmpse91ig1n/testfile.c -o /home/skamath/waystack/build/meson-private/tmpse91ig1n/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include <time.h>
+#include <limits.h>
+
+        #if defined __stub_clock_gettime || defined __stub___clock_gettime
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &clock_gettime;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "clock_gettime" : YES 
+Configuring config.h using configuration
+Configuring wayland-version.h using configuration
+Pkg-config binary for 1 is cached.
+Determining dependency 'expat' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /home/skamath/wld/host_dep/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion expat` -> 0
+stdout:
+2.2.9
+-----------
+env[PKG_CONFIG_PATH]: /home/skamath/wld/host_dep/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags expat` -> 0
+env[PKG_CONFIG_PATH]: /home/skamath/wld/host_dep/lib/x86_64-linux-gnu/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs expat` -> 0
+stdout:
+-L/usr/lib/x86_64-linux-gnu -lexpat
+-----------
+env[PKG_CONFIG_PATH]: /home/skamath/wld/host_dep/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --libs expat` -> 0
+stdout:
+-lexpat
+-----------
+Run-time dependency expat found: YES 2.2.9
+Dependency libxml-2.0 from subproject subprojects/libxml2-2.10.3 found: YES 2.10.3
+Program embed.py found: YES (/usr/bin/python3 /home/skamath/waystack/subprojects/wayland-1.20.0/src/embed.py)
+Pkg-config binary for 0 is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Determining dependency 'wayland-scanner' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion wayland-scanner` -> 0
+stdout:
+1.18.0
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags wayland-scanner` -> 0
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs wayland-scanner` -> 0
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs wayland-scanner` -> 0
+Dependency wayland-scanner found: NO found 1.18.0 but need: '1.20.0'
+Dependency lookup for wayland-scanner with method 'pkgconfig' failed: Invalid version, need 'wayland-scanner' ['1.20.0'] found '1.18.0'.
+CMake binary for 0 is not cached
+CMake binary missing from cross or native file, or env var undefined.
+Trying a default CMake fallback at cmake
+Found CMake: /home/skamath/.sysroot/bin/cmake (3.22.1)
+Extracting basic cmake information
+CMake Toolchain: Calling CMake once to generate the compiler state
+Calling CMake (['/home/skamath/.sysroot/bin/cmake']) in /home/skamath/waystack/build/meson-private/__CMake_compiler_info__ with:
+  - "--trace-expand"
+  - "--trace-format=json-v1"
+  - "--no-warn-unused-cli"
+  - "--trace-redirect=cmake_trace.txt"
+  - "-G"
+  - "Ninja"
+  - "-DCMAKE_TOOLCHAIN_FILE=/home/skamath/waystack/build/meson-private/__CMake_compiler_info__/CMakeMesonTempToolchainFile.cmake"
+  - "."
+Try CMake generator: auto
+Calling CMake (['/home/skamath/.sysroot/bin/cmake']) in /home/skamath/waystack/build/meson-private/cmake_wayland-scanner with:
+  - "--trace-expand"
+  - "--trace-format=json-v1"
+  - "--no-warn-unused-cli"
+  - "--trace-redirect=cmake_trace.txt"
+  - "-DCMAKE_TOOLCHAIN_FILE=/home/skamath/waystack/build/meson-private/cmake_wayland-scanner/CMakeMesonToolchainFile.cmake"
+  - "."
+  -- Module search paths:    ['/', '/home/skamath/.sysroot', '/opt', '/usr', '/usr/local']
+  -- CMake root:             /home/skamath/.sysroot/share/cmake-3.22
+  -- CMake architectures:    ['aarch64-linux-gnu', 'arm-linux-gnueabihf', 'i386-linux-gnu', 'x86_64-linux-gnu']
+  -- CMake lib search paths: ['lib', 'lib32', 'lib64', 'libx32', 'share', 'lib/aarch64-linux-gnu', 'lib/arm-linux-gnueabihf', 'lib/i386-linux-gnu', 'lib/x86_64-linux-gnu']
+Preliminary CMake check failed. Aborting.
+Build-time dependency wayland-scanner found: NO (tried cmake)
+
+subprojects/wayland-1.20.0/src/meson.build:73:1: ERROR: Dependency lookup for wayland-scanner with method 'pkgconfig' failed: Invalid version, need 'wayland-scanner' ['1.20.0'] found '1.18.0'.
