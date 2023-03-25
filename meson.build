@@ -4,6 +4,7 @@ project('ms', 'c', 'cpp',
 
 subproject('zlib')
 subproject('libxml2')
+subproject('expat')
 subproject('libffi')
 subproject('wayland')
 subproject('wayland-protocols')
